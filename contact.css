@@ -1,0 +1,366 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'poppins', sans-serif;
+}
+body{
+    
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background: url("image/bg_c.jpg");
+ 
+}
+.contact-section{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5%;
+    margin-bottom: 30px;
+}
+
+.contact-info{
+    color: #fff;
+    max-width: 500px;
+    line-height: 65px;
+    padding-left: 50px;
+    font-size: 18px;
+    
+}
+.contact-info i{
+    margin-right: 20px;
+    font-size: 25px;
+}
+.contact-form{
+    max-width: 700px;
+    margin-right: 50px;
+}
+
+.contact-info, .contact-form{
+    flex: 1;
+}
+
+.contact-form h1{
+    color: greenyellow;
+    text-align: center;
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+.contact-form .text-box{
+    background: #000;
+    color: #fff;
+    border: none;
+    width: 100%;
+    height: 50px;
+    padding: 12px;
+    font-size: 15px;
+    border-radius: 5px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    opacity: 0.9;
+}
+
+
+.contact-form .text-box:first-child{
+    margin-right: 15px;
+}
+
+.contact-form textarea{
+    background: #000;
+    color: #fff;
+    border: none;
+    width: 100%;
+    padding: 12px;
+    font-size: 15px;
+    min-height: 200px;
+    max-height: 400px;
+    resize: vertical;
+    border-radius: 5px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    
+    margin-top: 20px;
+    opacity: 0.9;
+    
+}
+
+
+
+.send-btn{
+    padding: 7px 10px;
+    border-radius: 5px;
+    border: 2px solid #21ebff;
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 1px;
+text-transform: uppercase;
+    text-decoration: none;
+    background: none;
+    color: #21ebff;
+    width: 100px;
+    float: right;
+    margin-top: 25px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+.send-btn:hover{
+    background: #21ebff;
+    transition: .3s;
+    color: #111;
+    box-shadow: 0 0 50px #21ebff;
+    transition-delay: 0.3s;
+}
+@media screen and (max-width: 942px){
+    .contact-section{
+        margin-top: 20%;
+        flex-direction: column;
+    }
+    .contact-info, .contact-form{
+        margin: 30px 50px;
+    }
+    .contact-form h1{
+        font-size: 30px;
+    }
+    .contact-form .text-box{
+        width: 100%;
+    }
+    #name_err{
+        color: yellowgreen;
+        font-size: 13px;
+        font-weight: 200;
+    }
+    
+    #email_err{
+        color: yellowgreen;
+        font-size: 13px;
+        font-weight: 200;
+    }
+    
+    #message_err{
+        color: yellowgreen;
+        font-size: 13px;
+        font-weight: 200;
+    }
+}
+
+
+nav{
+    height: 80px;
+    width: 100%;
+    background: none;
+
+}
+div.logo{
+    font-size: 35px;
+    font-weight: bold;
+    color: white;
+    padding: 0 100px;
+    line-height: 80px;
+    display: flex;
+    float: left;
+
+}
+nav ul{
+    float: right;
+    display: flex;
+    margin-right: 80px;
+    
+}
+nav ul li{
+    display: inline-block;
+    margin: 0 10px;
+    line-height: 40px;
+}
+nav ul li a{
+    position: relative;
+    padding: 7px 10px;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 18px;
+    display: inline-block;
+    margin-top: 20px;
+    transition: 0.5s;
+    overflow: hidden;
+    color: #21ebff;
+   
+}
+nav ul li a:hover{
+    background: #21ebff;
+    color: #111;
+    box-shadow: 0 0 50px #21ebff;
+    transition-delay: 0.5s;
+}
+nav ul li a:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 10px;
+    height: 10px;
+    border-top: 2px solid #21ebff;
+    border-left: 2px solid #21ebff;
+    transition: 0.5s;
+    transition-delay: 0.5s;
+}
+nav ul li a:hover:before{
+    width: 100%;
+    height: 100%;
+    transition-delay: 0.5s;
+}
+nav ul li a:after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 10px;
+    height: 10px;
+    border-bottom: 2px solid #21ebff;
+    border-right: 2px solid #21ebff;
+    transition: 0.5s;
+    transition-delay: 0.5s;
+}
+nav ul li a:hover:after{
+    width: 100%;
+    height: 100%;
+    transition-delay: 0.5s;
+}
+nav ul li a{
+    filter: hue-rotate(270deg);
+}
+
+a.active, a:hover{
+    
+    background: #21ebff;
+    transition: .5s;
+    color: #111;
+    box-shadow: 0 0 50px #21ebff;
+    transition-delay: 0.5s;
+}
+
+nav .btn i{
+    color: #fff;
+    font-size: 30px;
+    cursor: pointer;
+    display: none;
+    margin-top: 20px;
+    margin-right: 25px;
+    float: right;
+}
+#click{
+    display: none;
+}
+
+@media(max-width: 940px){
+    nav .btn i{
+        display: block;
+    }
+    #click:checked ~ .btn i:before{
+        content: "\f00d";
+
+    }
+    nav ul{
+        position: fixed;
+        top: 80px;
+        left: -100%;
+        background: none;
+        height: 100vh;
+        width: 100%;
+        display: block;
+        text-align: center;
+        transition: all 0.3s ease;
+    }
+    #click:checked ~ ul{
+        left: 0%;
+    }
+    nav ul li{
+        margin: 40px 0;
+    }
+    nav ul li a{
+        font-size: 18px;
+        display: block;
+    }
+    a:hover, a.active{
+        color:black;
+        background: #21ebff;
+    }
+}
+
+
+
+
+
+footer{
+    
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #111;
+    height: auto;
+    width: 100%;
+    padding-top: 40px;
+    color: #fff;
+}
+
+h4{
+    padding: 0 1000;
+    line-height: 80px;
+    color: #fff;
+    font-size: 35px;
+}
+
+.footer-section{
+
+text-align: center;
+display: flex;
+justify-content: center;
+flex-direction: column;
+}
+
+.para{
+    color: #fff;
+    margin: 10px auto;
+    max-width: 500px;
+    font-size: 15px;
+    margin-bottom: 15px;
+
+}
+
+.footer-bottom{
+    width: 100%;
+    color: darkgray;
+    background: #000;
+    padding: 20px;
+    padding-bottom: 30px;
+    text-align: center;
+}
+
+.footer-bottom .cc{
+    font-size: 16px;
+    word-spacing: 2px;
+}
+
+
+/*  validation   */
+
+#name_err{
+    color: yellowgreen;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+#email_err{
+    color: yellowgreen;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+#message_err{
+    color: yellowgreen;
+    font-size: 16px;
+    font-weight: 300;
+}

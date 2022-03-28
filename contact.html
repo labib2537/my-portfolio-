@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link rel="stylesheet" href="contact.css">
+    <title>Contact</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <nav class="nav">
+        
+        <div class="logo"><span style="color:greenyellow;">Farhan</span>Labib</div>
+        <input type="checkbox" id="click">
+        <label for="click" class="btn">
+            <i class="fas fa-bars"></i>         
+        </label>
+        <ul class="nav_portion">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a class="active" href="contact.html">Contact</a></li>
+
+        </ul>
+        
+    </nav>
+
+    <div class="bg_img"></div>
+    <div class="contact-section">
+        <div class="contact-info">
+            <div><i class="fas fa-map-marker-alt"></i>#69 Munshipara Road, Tongi, BD</div>
+            <div><i class="fas fa-envelope"></i>sayed15-2537@diu.edu.bd</div>
+            <div><i class="fas fa-phone"></i>+8801712988806</div>
+            <div><i class="fas fa-clock"></i>Sat - Fri 10.00 AM to 5.00 PM</div>
+        </div>
+        <div class="contact-form">
+            <h1>Contact</h1>
+            <form class="contact" action="" autocomplete="off" onsubmit="return valid()">
+               
+                            <input type="text" name="name" id="name" class="text-box" placeholder="Your Name">
+                            <br><span id="name_err"></span>
+                        
+                            <input type="text" name="email" id="email" class="text-box" placeholder="Your Email">                            
+                            <br><span id="email_err"></span>
+                       
+                            <textarea name="message" id="message" rows="5" placeholder="Your Message"></textarea>
+                            <br><span id="message_err"></span>
+               
+                
+                
+                <input type="submit" name="submit" class="send-btn" value="send">
+            </form>
+        </div>
+    </div>
+
+
+
+
+
+    <footer>
+        <div class="footer-section">
+            <h4><span style="color: yellowgreen;">Farhan</span>Labib</h4>
+            <div class="para"><p>Welcome to my portfolio</p></div>
+            <div class="icon">
+                <a href="https://www.facebook.com/farhan.karib.33"><img src="image/face.svg" alt=""></a>
+                <a href="https://github.com/labib2537"><img src="image/git.svg" alt=""></a>
+                <a href="https://www.linkedin.com/in/farhan-labib-b2b0aa192"><img src="image/lin.svg" alt=""></a>
+                <a href="https://twitter.com/KaribFarhan"><img src="image/tw.svg" alt=""></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p class="cc">© 2022. All rights reserved | Design By <span style="color: yellowgreen;">FarhanLabib</span></p>
+        </div>
+    </footer>
+
+
+    <script type="text/javascript">
+        function valid(){
+            var nm = document.getElementById('name').value;
+            var em = document.getElementById('email').value;
+            var msg = document.getElementById('message').value;
+
+
+            if(nm == ""){
+        document.getElementById('name_err').innerHTML="**Please write Name in the box**";
+    return false;
+    }
+        else if(nm.length<2){
+        document.getElementById('name_err').innerHTML="**Please write atleast 2 character in the box**";
+        return false;
+
+        }
+        else if(!isNaN(nm)){
+        document.getElementById('name_err').innerHTML="**Please type Alphabet only in the box**";
+        return false;
+
+        }else{
+        document.getElementById('name_err').innerHTML="";
+        }
+
+
+        if(em == ""){
+        document.getElementById('email_err').innerHTML="**Please write the Email in the box**";
+        return false;
+    }
+    else if(em.indexOf('@')<=0){
+        document.getElementById('email_err').innerHTML="**invalid position of @**";
+        return false;
+    }
+    else if(em.charAt(em.length-4)!='.'){
+        document.getElementById('email_err').innerHTML="**invalid position of .**";
+        return false;
+    }
+    else{
+        document.getElementById('email_err').innerHTML="";
+    }
+
+    if(msg == ""){
+        document.getElementById('message_err').innerHTML="**Please write the message in the box**";
+    return false;
+    }
+        else if(msg.length<6){
+        document.getElementById('message_err').innerHTML="**Please write some text in the box**";
+        return false;
+
+        }
+        else if(!isNaN(msg)){
+        document.getElementById('message_err').innerHTML="**Please add some text with number**";
+        return false;
+
+        }else{
+        document.getElementById('message_err').innerHTML="";
+        alert("Thanks! Your message has been sent Successfully.");
+        }
+
+
+
+    }
+
+    </script>
+    
+</body>
+</html>

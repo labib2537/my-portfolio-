@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-circle-progress/1.2.2/circle-progress.min.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link rel="stylesheet" href="skills.css">
+    <title>Skills</title>
+</head>
+<body>
+    <nav class="nav">
+        
+        <div class="logo"><span style="color:greenyellow;">Farhan</span>Labib</div>
+        <input type="checkbox" id="click">
+        <label for="click" class="btn">
+            <i class="fas fa-bars"></i>  
+        </label>
+        <ul class="nav_portion">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a class="active" href="skills.html">Skills</a></li>
+            <li><a href="contact.html">Contact</a></li>
+
+        </ul>
+        
+    </nav>
+
+
+
+    <section class="skill-section">
+
+
+
+    <div class="skill-bar">
+        <h1>Programming Skills</h1>
+        <div class="bar">
+            <div class="info">
+                <span>C</span>
+            </div>
+            <div class="progress-line C"><span></span></div>
+        </div>
+
+        <div class="bar">
+            <div class="info">
+                <span>C++</span>
+            </div>
+            <div class="progress-line Cpp"><span></span></div>
+        </div>
+
+        <div class="bar">
+            <div class="info">
+                <span>Java</span>
+            </div>
+            <div class="progress-line Java"><span></span></div>
+        </div>
+
+        <div class="bar">
+            <div class="info">
+                <span>Python</span>
+            </div>
+            <div class="progress-line Python"><span></span></div>
+        </div>
+
+        <div class="bar">
+            <div class="info">
+                <span>CSS</span>
+            </div>
+            <div class="progress-line CSS"><span></span></div>
+        </div>
+
+        <div class="bar">
+            <div class="info">
+                <span>HTML</span>
+            </div>
+            <div class="progress-line HTML"><span></span></div>
+        </div>
+
+        <div class="bar">
+            <div class="info">
+                <span>MySQL</span>
+            </div>
+            <div class="progress-line MySQL"><span></span></div>
+        </div>
+    </div>
+
+
+
+   <div class="pro-skill">
+       <h2>Professional Skills</h2>
+
+    <div class="wrapper">
+        <div class="card cm">
+            <div class="circle">
+                <div class="bar"></div>
+                <div class="box"><span></span></div>
+            </div>
+            <div class="text">Communication</div>
+        </div>
+    
+        <div class="card pr">
+            <div class="circle">
+                <div class="bar"></div>
+                <div class="box"><span></span></div>
+            </div>
+            <div class="text">Presentation</div>
+        </div>
+    
+        <div class="card tw">
+            <div class="circle">
+                <div class="bar"></div>
+                <div class="box"><span></span></div>
+            </div>
+            <div class="text">Team Work</div>
+        </div>
+    
+        <div class="card pm">
+            <div class="circle">
+                <div class="bar"></div>
+                <div class="box"><span></span></div>
+            </div>
+            <div class="text">Project Management</div>
+        </div>
+    
+        <div class="card cr">
+            <div class="circle">
+                <div class="bar"></div>
+                <div class="box"><span></span></div>
+            </div>
+            <div class="text">Creativity</div>
+        </div>
+    
+        <div class="card ps">
+            <div class="circle">
+                <div class="bar"></div>
+                <div class="box"><span></span></div>
+            </div>
+            <div class="text">Problem Solving</div>
+        </div>
+    </div>
+</div>
+
+
+
+
+</section>
+
+
+
+
+<script>
+    let options = {
+        startAngle: -1.55,
+        size: 120, 
+        value: 0.9, 
+        fill: {gradient: ["green","yellowgreen"]}
+    }
+    $(".circle .bar").circleProgress(options).on('circle-animation-progress',
+    function(event, progress,stepValue){
+        $(this).parent().find("span").text(String(stepValue.toFixed(2).substr(2)) + "%");
+
+    });
+    $(".ps .bar").circleProgress({
+        value: 0.88,
+    });
+    $(".cr .bar").circleProgress({
+        value: 0.8,
+    });
+    $(".pm .bar").circleProgress({
+        value: 0.91,
+    });
+    $(".tw .bar").circleProgress({
+        value: 0.85,
+    });
+    $(".pr .bar").circleProgress({
+        value: 0.82,
+    });
+    $(".cm .bar").circleProgress({
+        value: 0.9,
+    });
+
+</script>
+
+
+<!-- resume content-->
+
+<section class="resume-section">
+    <div class="resume">
+        <h4>Education</h4>
+        <div class="row">
+            <div class="item">
+                <div class="icon">
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
+                <span class="since">2019 - Present</span>
+                <h3>Computer Science and Engineering</h3>
+                <p class="text">At present I'm studying in 4th year at Daffodil International University</p>
+            </div>
+
+            <div class="item">
+                <div class="icon">
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
+                <span class="since">2016 - 2018</span>
+                <h3>Higher Secondary Certificate</h3>
+                <p class="text">I completed my HSC in Science from Jatir Janak Bangabandhu Sheikh Mujibur Rahman Government College with 
+                    <span class="es">GPA 5.00</span></p>
+            </div>
+
+            <div class="item">
+                <div class="icon">
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
+                <span class="since">2016</span>
+                <h3>Secondary School Certificate</h3>
+                <p class="text">I completed my SSC in Science from Siraj Uddin Sarker Vidyaniketan & College with 
+                    <span class="es">GPA 5.00</span></p>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- footer content-->
+
+<footer>
+    <div class="footer-section">
+        <h4><span style="color: yellowgreen;">Farhan</span>Labib</h4>
+        <div class="para"><p>Welcome to my portfolio</p></div>
+        <div class="icon">
+            <a href="https://www.facebook.com/farhan.karib.33"><img src="image/face.svg" alt=""></a>
+            <a href="https://github.com/labib2537"><img src="image/git.svg" alt=""></a>
+            <a href="https://www.linkedin.com/in/farhan-labib-b2b0aa192"><img src="image/lin.svg" alt=""></a>
+            <a href="https://twitter.com/KaribFarhan"><img src="image/tw.svg" alt=""></a>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p class="cc">© 2022. All rights reserved | Design By <span style="color: yellowgreen;">FarhanLabib</span></p>
+    </div>
+</footer>
+    
+    
+    
+</body>
+</html>
